@@ -1,6 +1,6 @@
 var datatable = null;
-var db = openDatabase('MyData','','My Database' , 102400);
-function inti(){
+var db = openDatabase('MyData','1.0','My Database' , 1024*1024);
+function init(){
     datatable = document.getElementById("datatable");
     showAllData();
 }
