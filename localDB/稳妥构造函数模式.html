@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>稳妥构造函数模式</title>
+</head>
+<body>
+    
+<script type="text/javascript">
+    function Person(name,age,job){
+        var o = new Object();
+        o.sayName = function(){
+            alert(name);
+        };
+        return o;
+    }
+    var friend = Person('wuson',22,'Software Engineer');
+    friend.sayName();
+</script>    
+</body>
+</html>

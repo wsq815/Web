@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>寄生构造函数模式</title>
+</head>
+<body>
+    
+<script type="text/javascript">
+    function SpecialArray(){
+        var values = new Array();
+        //添加值
+        values.push.apply(values,arguments);
+        //添加方法
+        values.toPipedString = function(){
+            return this.join("#");
+        };
+        return values;
+    }
+    var colors = new SpecialArray("red","blue","green");
+    alert(colors.toPipedString());
+</script>    
+</body>
+</html>
